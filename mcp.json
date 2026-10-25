@@ -1,0 +1,57 @@
+{
+  "mcpServers": {
+    "albert-einstein-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "TITAN_PROTOCOL": "EINSTEIN",
+        "FIPS_203_LEVEL": "ML-KEM-768",
+        "FIPS_204_LEVEL": "ML-DSA-65"
+      },
+      "tools": [
+        {
+          "name": "simulate_spacetime_curvature",
+          "description": "Calculates gravitational time dilation and Riemannian curvature tensors near extreme mass concentrations",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "mass_solar": {
+                "type": "number"
+              },
+              "radial_distance_km": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "mass_solar",
+              "radial_distance_km"
+            ]
+          }
+        },
+        {
+          "name": "solve_photoelectric_quantum",
+          "description": "Computes photon energy quantization, work function thresholds and relativistic Doppler shifts",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "frequency_hz": {
+                "type": "number"
+              },
+              "work_function_ev": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "frequency_hz"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
